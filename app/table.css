@@ -1,0 +1,82 @@
+/* table.css */
+
+table {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 0.875rem; /* or your preferred size */
+  text-align: left;
+  color: #717171; /* or your preferred default text color */
+  border-collapse: collapse;
+  background-color: var(--background); /* Use your global background */
+}
+
+th, td {
+  padding: 0.75rem;
+  border: 1px solid #ccc; /* Or a suitable border color */
+  text-align: left;
+}
+
+thead {
+  color: white;
+  background-color: #333; /* Or your preferred header background */
+}
+
+/* Zebra striping using classes (React-friendly) */
+.even-row {
+  background-color: #f9f9f9; /* Light gray for even rows */
+}
+
+.odd-row {
+  background-color: #e6e6e6;/* Optional: Style for odd rows if you need it */
+}
+
+/* Hover effect (optional) */
+tr:hover {
+  background-color: #e0e0e0; /* A subtle hover background */
+}
+
+
+/* Dark mode adjustments - apply to the classes and elements */
+@media (prefers-color-scheme: dark) {
+  table {
+    color: #a1a1aa; /* Dark mode text color */
+    border-color: #333; /* Dark mode border color */
+  }
+
+  th, td {
+    border-color: #555;
+  }
+
+  thead {
+    background-color: #111; /* Dark mode header background */
+    color: white;
+  }
+
+  .even-row {
+    background-color: #222; /* Darker background for even rows */
+  }
+
+  .odd-row {
+    background-color: #333;
+  }
+
+  tr:hover {
+    background-color: #353535; /* Darker hover background */
+  }
+
+  /* ... any other dark mode styles */
+}
+
+/* Optional: Caption styling */
+caption {
+  padding: 0.5rem;
+  font-style: italic;
+  color: #777; /* Or a suitable caption color */
+  text-align: center;
+}
+
+/* Optional: Responsive table */
+.table-responsive {
+  overflow-x: auto;
+}
