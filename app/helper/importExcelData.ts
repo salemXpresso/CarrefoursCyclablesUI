@@ -17,7 +17,7 @@ export const headerMapping = {
   'Carrefour à feux : espace de stockage cycliste sur les girations à gauche': 'storage',
   'Giratoire : Aménagement pour ralentir les automobilistes': 'slowdown',
   'L\'aménagement permet une continuité de la trajectoire, sans pied à terre pour les cyclistes': 'nofoot',
-  'La trajectoire de traversée est directe-courte': 'short',
+  'La trajectoire de traversée est directe / courte': 'short',
   'Aucun obstacle n\'est présent': 'obstacle',
   'Carrefour à feux : présence d\'un tourne à droite': 'rightturn',
   'Giratoire : les cyclistes sont prioritaires sur les usagers motorisés': 'priority',

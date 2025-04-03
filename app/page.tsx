@@ -4,11 +4,7 @@ import downloadExcelFile from "@/app/helper/downloadExcel";
 import importExcelData from "@/app/helper/importExcelData";
 import {excelDateToDateString} from "@/app/helper/dateUtils";
 import toOsmUrl from "@/app/helper/geoUtils";
-
-interface Rating {
-  rate: number;
-  count: number;
-}
+import ModalForm from "@/app/components/ModalAddCarrefour";
 
 interface Carrefours {
   id: number;
@@ -74,6 +70,7 @@ export default function Home() {
             Export
           </button>
         </div>
+        { carrefours.length>0 && (
         <table>
           <thead>
           <tr>
@@ -128,6 +125,10 @@ export default function Home() {
           })}
           </tbody>
         </table>
+        )}
+        <main className="flex items-center justify-center button-add">
+          <ModalForm onSubmit={(newCarrefour) => setCarrefours([...carrefours, newCarrefour])} />
+        </main>
       </div>
   );
 }
